@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="demandeurbycomptable" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<field name="nomdem" class="java.lang.String"/>
+	<field name="postnomdem" class="java.lang.String"/>
+	<field name="prenomdem" class="java.lang.String"/>
+	<field name="NOM_COMPTABLE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="93" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="58" width="256" height="35" />
+				<textElement>
+					<font size="16" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DEMANDEUR PAR COMPTABLE]]></text>
+			</staticText>
+			<image>
+				<reportElement x="19" y="12" width="120" height="81" />
+				<imageExpression><![CDATA["C:\\Users\\shindano\\Pictures\\Saved Pictures\\logocampus.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="162" y="16" width="227" height="31" />
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIKIN MATH-INFO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="42" y="0" width="138" height="20" />
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[nomdem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="138" height="20" />
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[postnomdem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="127" height="20" />
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[prenomdem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="0" width="90" height="20" />
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[NOM_COMPTABLE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="42" y="0" width="138" height="20" />
+				<textFieldExpression><![CDATA[$F{nomdem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="138" height="20" />
+				<textFieldExpression><![CDATA[$F{postnomdem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="0" width="127" height="20" />
+				<textFieldExpression><![CDATA[$F{prenomdem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="0" width="90" height="20" />
+				<textFieldExpression><![CDATA[$F{NOM_COMPTABLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="8" y="2" width="34" height="20" />
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

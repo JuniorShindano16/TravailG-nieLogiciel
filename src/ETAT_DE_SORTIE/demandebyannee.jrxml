@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="demandebyannee" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<field name="nomdem" class="java.lang.String"/>
+	<field name="postnomdem" class="java.lang.String"/>
+	<field name="prenomdem" class="java.lang.String"/>
+	<field name="sessionReleve" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="186" y="14" width="189" height="27" />
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIKIN MATH-INFO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="52" width="204" height="27" />
+				<textElement>
+					<font size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[LISTE DES DEMANDES]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="176" height="79" />
+				<imageExpression><![CDATA["C:\\Users\\shindano\\Pictures\\Saved Pictures\\logocampus.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="39" y="0" width="112" height="20" />
+				<textElement>
+					<font size="12" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[nomdem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="151" y="0" width="138" height="20" />
+				<textElement>
+					<font size="12" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[postnomdem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="0" width="138" height="20" />
+				<textElement>
+					<font size="12" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[prenomdem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="0" width="101" height="20" />
+				<textElement>
+					<font size="12" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[sessionReleve]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="39" y="0" width="112" height="20" />
+				<textFieldExpression><![CDATA[$F{nomdem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="151" y="0" width="138" height="20" />
+				<textFieldExpression><![CDATA[$F{postnomdem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="0" width="138" height="20" />
+				<textFieldExpression><![CDATA[$F{prenomdem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="0" width="101" height="20" />
+				<textFieldExpression><![CDATA[$F{sessionReleve}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="2" width="39" height="20" />
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

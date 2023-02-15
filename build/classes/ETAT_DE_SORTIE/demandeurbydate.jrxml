@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="demandeurbydate" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<field name="nomdem" class="java.lang.String"/>
+	<field name="postnomdem" class="java.lang.String"/>
+	<field name="prenomdem" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="157" y="47" width="304" height="22" />
+				<textElement>
+					<font size="14" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[LISTE DES DEMANDEURS PAR DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="17" width="176" height="30" />
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIKIN MATH-INFO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="12" y="15" width="135" height="54" />
+				<imageExpression><![CDATA["C:\\Users\\shindano\\Pictures\\Saved Pictures\\logocampus.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="46" y="0" width="185" height="20" />
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[nomdem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="0" width="185" height="20" />
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[postnomdem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="0" width="91" height="20" />
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[prenomdem]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="46" height="20" />
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="46" y="0" width="185" height="20" />
+				<textFieldExpression><![CDATA[$F{nomdem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="0" width="185" height="20" />
+				<textFieldExpression><![CDATA[$F{postnomdem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="0" width="91" height="20" />
+				<textFieldExpression><![CDATA[$F{prenomdem}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
